@@ -1,0 +1,192 @@
+* {
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Poppins', sans-serif;
+    margin: 0;
+}
+
+h1,
+h2,
+h3,
+h4,
+nav,
+.button {
+    font-family: 'Barlow Semi Condensed', sans-serif;
+    text-transform: uppercase;
+}
+
+a {
+    text-decoration: none;
+    color: #fff;
+}
+
+img {
+    display: block;
+    max-width: 100%;
+}
+
+h2,
+.active,
+.button {
+    color: rgb(191, 146, 91);
+}
+
+header {
+    color: #fff;
+    background: linear-gradient(rgba(0,0,0,0.6), rgba(0,0,0,0.6)), url('graphics/barbershop-1920w.jpg') no-repeat center;
+    background-size: cover;
+    height: 914px;
+    position: relative;
+    z-index: 0;
+}
+
+nav {
+    display: grid;
+    grid-template-columns: 50% 50%;
+    background: rgba(0, 0, 0, 0.7);
+    padding: 0 20px;
+    position: fixed;
+    z-index: 1;
+    top: 0;
+    width: 100%;
+}
+
+nav h1 {
+    display: flex;
+}
+
+nav div {
+    display: flex;
+    flex-direction: column;
+    align-content: center;
+    justify-content: right;
+    margin-top: 25px;
+}
+
+nav ul,
+li {
+    display: flex;
+    justify-content: flex-end;
+    padding: 0;
+}
+
+nav button {
+    text-align: right;
+    background: none;
+    border: 0;
+    color: #fff;
+    text-transform: uppercase;
+}
+
+nav button + .menu {
+    display: none;
+    visibility: hidden;
+}
+
+nav button.menu-open + .menu {
+    display: block;
+    visibility: visible;
+}
+
+.header-content {
+    padding: 10px;
+    position: absolute;
+    top: 310px;
+}
+
+header h3 {
+    font-size: 2.5em;
+    margin: 0;
+}
+
+header h3 span {
+    color: transparent;
+      -webkit-text-stroke-width: 1px;
+      -webkit-text-stroke-color: white;
+}
+
+header p {
+    margin: 50px 0;
+}
+
+header .button {
+    background: none;
+    border: 1.5px solid rgb(191, 146, 91);
+    padding: 10px;
+}
+
+.services {
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    color: #fff;
+}
+
+.services div {
+    padding: 0 10px;
+}
+
+.services div:nth-child(even) {
+    background-color: #b08853;
+}
+
+.services div:nth-child(odd) {
+    background-color: #b89463;
+}
+
+.services img {
+    border-radius: 100%;
+    width: 50%;
+    margin: auto;
+    z-index: 2;
+}
+
+.services h4 {
+    font-size: 2em;
+    margin-bottom: 0;
+}
+
+.about {
+    display: flex;
+    flex-flow: column;
+    padding: 0 10px;
+}
+
+.about h2 {
+    font-size: 1em;
+    margin: 40px 0 10px 0;
+}
+
+.about h3 {
+    font-size: 1.5em;
+    margin: 0;
+}
+
+.about div {
+    display: flex;
+    background-color: #b89463;
+    /* width: 50%; */
+    color: #fff;
+}
+
+.about i {
+    width: 20px;
+    height: 20px;
+    background-color: #000;
+    border-radius: 100%;
+    text-align: center;
+}
+
+@media (min-width: 768px) {
+    header {
+        height: 1000px;
+    }
+    nav h1 {
+        justify-content: center;
+    }
+    .services, .about {
+        flex-direction: row;
+    }
+}
