@@ -11,8 +11,10 @@ h1,
 h2,
 h3,
 h4,
+h5,
 nav,
-.button {
+.button,
+.testifier-title {
     font-family: 'Barlow Semi Condensed', sans-serif;
     text-transform: uppercase;
 }
@@ -38,8 +40,8 @@ header {
     background: linear-gradient(rgba(0,0,0,0.6), rgba(0,0,0,0.6)), url('graphics/barbershop-1920w.jpg') no-repeat center;
     background-size: cover;
     height: 914px;
-    position: relative;
-    z-index: 0;
+    /* position: relative; */
+    /* z-index: 0; */
 }
 
 nav {
@@ -60,13 +62,13 @@ nav h1 {
 nav div {
     display: flex;
     flex-direction: column;
-    align-content: center;
-    justify-content: right;
+    /* align-content: center;
+    justify-content: right; */
     margin-top: 25px;
 }
 
 nav ul,
-li {
+nav li {
     display: flex;
     justify-content: flex-end;
     padding: 0;
@@ -77,7 +79,6 @@ nav button {
     background: none;
     border: 0;
     color: #fff;
-    text-transform: uppercase;
 }
 
 nav button + .menu {
@@ -104,7 +105,7 @@ header h3 {
 header h3 span {
     color: transparent;
       -webkit-text-stroke-width: 1px;
-      -webkit-text-stroke-color: white;
+      -webkit-text-stroke-color: #fff;
 }
 
 header p {
@@ -126,6 +127,7 @@ header .button {
 
 .services div {
     padding: 0 10px;
+    padding-bottom: 100px;
 }
 
 .services div:nth-child(even) {
@@ -140,7 +142,7 @@ header .button {
     border-radius: 100%;
     width: 50%;
     margin: auto;
-    z-index: 2;
+    margin-top: -90px;
 }
 
 .services h4 {
@@ -148,10 +150,24 @@ header .button {
     margin-bottom: 0;
 }
 
+.icon-bg {
+    display: flex;
+    align-items: center;
+    width: 50px;
+    height: 50px;
+    border-radius: 100%;
+    color: #fff;
+}
+
+.icon-bg i {
+    margin: auto;
+}
+
 .about {
     display: flex;
     flex-flow: column;
-    padding: 0 10px;
+    padding: 10px;
+    margin-bottom: 40px;
 }
 
 .about h2 {
@@ -159,24 +175,139 @@ header .button {
     margin: 40px 0 10px 0;
 }
 
-.about h3 {
+.about h3,
+.testimonial h3 {
     font-size: 1.5em;
     margin: 0;
 }
 
-.about div {
+.about .banner {
     display: flex;
-    background-color: #b89463;
-    /* width: 50%; */
+    align-items: center;
+    background-color: #b08853;
+    width: 50%;
+    padding: 5px;
     color: #fff;
 }
 
-.about i {
-    width: 20px;
-    height: 20px;
+.about .banner .icon-bg {
     background-color: #000;
-    border-radius: 100%;
+    margin: 0 15px;
+}
+
+.about .banner i {
+    margin: auto;
+    font-size: 1.5em;
+}
+
+.about h5 {
+    margin: 0;
+    font-size: 1.9em;
+}
+
+.about h5 span {
+    display: block;
+    font-size: 0.4em;
+}
+
+.testimonial {
+    background-color: #eae8df;
     text-align: center;
+    padding: 40px 0;
+    margin-top: 20px;
+}
+
+.testimonial h2 {
+    font-size: 1em;
+}
+
+.testimonial-content {
+    background-color: #fff;
+    border-radius: 5px;
+    margin: 40px 10px;
+    padding: 15px;
+    text-align: left;
+}
+
+.testimonial-content .icon-bg {
+    background-color: #b89463;
+    margin-top: -38px;
+    font-size: 1.4em;
+}
+
+.testifier {
+    display: flex;
+    align-items: center;
+}
+
+.testifier img {
+    border-radius: 100%;
+    max-width: 28%;
+    margin: 0 20px 0 5px;
+}
+
+.testifier i {
+    color: #b89463;
+    font-size: 0.8em;
+    margin: 5px 3px 0 0;
+}
+
+.testifier p:first-of-type {
+    font-size: 1.3em;
+    margin: 5px 0;
+}
+
+.testifier p:last-of-type {
+    color: #b89463;
+}
+
+.hide-on-mobile {
+    display: none;
+}
+
+footer {
+    display: flex;
+    flex-direction: column;
+    background-color: #000;
+    color: #fff;
+    padding: 10px;
+}
+
+footer .icons-social {
+    display: flex;
+    margin: 10px;
+}
+
+footer .icon-bg {
+    background-color: #b89463;
+    margin: 5px;
+}
+
+footer h3 {
+    margin-left: 10px;
+}
+
+footer li {
+    margin: 0 0 5px -10px;
+    color: #b6b5b3;
+}
+
+footer a, footer .fa-li {
+    color: #b6b5b3;
+}
+
+footer .contact ul {
+    --fa-li-width: 3em;
+    margin-left: 49px;
+}
+
+footer .contact .fa-li {
+    color: #b89463;
+    margin-left: 5px;
+}
+
+footer .contact li {
+    margin-bottom: 15px;
 }
 
 @media (min-width: 768px) {
@@ -188,5 +319,8 @@ header .button {
     }
     .services, .about {
         flex-direction: row;
+    }
+    .hide-on-mobile {
+        display: unset;
     }
 }
