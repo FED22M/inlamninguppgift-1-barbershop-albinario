@@ -13,7 +13,7 @@ h3,
 h4,
 h5,
 nav,
-.button,
+button,
 .testifier-title {
     font-family: 'Barlow Semi Condensed', sans-serif;
     text-transform: uppercase;
@@ -31,7 +31,7 @@ img {
 
 h2,
 .active,
-.button {
+button {
     color: rgb(191, 146, 91);
 }
 
@@ -40,13 +40,11 @@ header {
     background: linear-gradient(rgba(0,0,0,0.6), rgba(0,0,0,0.6)), url('graphics/barbershop-1920w.jpg') no-repeat center;
     background-size: cover;
     height: 914px;
-    /* position: relative; */
-    /* z-index: 0; */
 }
 
 nav {
     display: grid;
-    grid-template-columns: 50% 50%;
+    grid-template-columns: 1fr 1fr;
     background: rgba(0, 0, 0, 0.7);
     padding: 0 20px;
     position: fixed;
@@ -55,15 +53,9 @@ nav {
     width: 100%;
 }
 
-nav h1 {
-    display: flex;
-}
-
 nav div {
     display: flex;
     flex-direction: column;
-    /* align-content: center;
-    justify-content: right; */
     margin-top: 25px;
 }
 
@@ -97,22 +89,22 @@ nav button.menu-open + .menu {
     top: 310px;
 }
 
-header h3 {
+.header-content h3 {
     font-size: 2.5em;
     margin: 0;
 }
 
-header h3 span {
+.header-content h3 span {
     color: transparent;
       -webkit-text-stroke-width: 1px;
       -webkit-text-stroke-color: #fff;
 }
 
-header p {
+.header-content p {
     margin: 50px 0;
 }
 
-header .button {
+.header-content button {
     background: none;
     border: 1.5px solid rgb(191, 146, 91);
     padding: 10px;
@@ -126,23 +118,22 @@ header .button {
 }
 
 .services div {
-    padding: 0 10px;
-    padding-bottom: 100px;
-}
-
-.services div:nth-child(even) {
-    background-color: #b08853;
+    padding: 0 30px 25% 30px;
 }
 
 .services div:nth-child(odd) {
     background-color: #b89463;
 }
 
+.services div:nth-child(even) {
+    background-color: #b08853;
+}
+
 .services img {
     border-radius: 100%;
     width: 50%;
     margin: auto;
-    margin-top: -90px;
+    margin-top: -25%;
 }
 
 .services h4 {
@@ -152,11 +143,9 @@ header .button {
 
 .icon-bg {
     display: flex;
-    align-items: center;
     width: 50px;
     height: 50px;
     border-radius: 100%;
-    color: #fff;
 }
 
 .icon-bg i {
@@ -164,8 +153,6 @@ header .button {
 }
 
 .about {
-    display: flex;
-    flex-flow: column;
     padding: 10px;
     margin-bottom: 40px;
 }
@@ -186,13 +173,13 @@ header .button {
     align-items: center;
     background-color: #b08853;
     width: 50%;
-    padding: 5px;
+    padding: 15px 0;
     color: #fff;
 }
 
 .about .banner .icon-bg {
     background-color: #000;
-    margin: 0 15px;
+    margin: 0 20px;
 }
 
 .about .banner i {
@@ -202,19 +189,18 @@ header .button {
 
 .about h5 {
     margin: 0;
-    font-size: 1.9em;
+    font-size: 1.5em;
 }
 
 .about h5 span {
     display: block;
-    font-size: 0.4em;
+    font-size: 0.5em;
 }
 
 .testimonial {
     background-color: #eae8df;
     text-align: center;
     padding: 40px 0;
-    margin-top: 20px;
 }
 
 .testimonial h2 {
@@ -233,6 +219,7 @@ header .button {
     background-color: #b89463;
     margin-top: -38px;
     font-size: 1.4em;
+    color: #fff;
 }
 
 .testifier {
@@ -259,15 +246,14 @@ header .button {
 
 .testifier p:last-of-type {
     color: #b89463;
+    text-transform: uppercase;
 }
 
 .hide-on-mobile {
-    display: none;
+    visibility: hidden;
 }
 
 footer {
-    display: flex;
-    flex-direction: column;
     background-color: #000;
     color: #fff;
     padding: 10px;
@@ -275,7 +261,7 @@ footer {
 
 footer .icons-social {
     display: flex;
-    margin: 10px;
+    margin: -105px 10px 10px 10px;
 }
 
 footer .icon-bg {
@@ -292,35 +278,108 @@ footer li {
     color: #b6b5b3;
 }
 
-footer a, footer .fa-li {
+footer a, footer .fa-li, footer p {
     color: #b6b5b3;
 }
 
 footer .contact ul {
     --fa-li-width: 3em;
-    margin-left: 49px;
-}
-
-footer .contact .fa-li {
-    color: #b89463;
-    margin-left: 5px;
+    margin-left: 55px;
 }
 
 footer .contact li {
     margin-bottom: 15px;
 }
 
-@media (min-width: 768px) {
-    header {
-        height: 1000px;
-    }
+footer .contact i {
+    color: #b89463;
+}
+
+@media (min-width: 1000px) {
     nav h1 {
+        display: flex;
         justify-content: center;
     }
+
+    nav #menu-button {
+        display: none;
+    }
+
+    nav button + .menu {
+        display: flex;
+        justify-content: flex-start;
+        visibility: visible;
+        margin-top: 0;
+    }
+
+    nav li {
+        margin-right: 30px;
+    }
+
+    .header-content {
+        left: 49%;
+        width: 450px;
+    }
+
+    .header-content div {
+        border-left: 2px solid #b89463;
+        margin-left: 10px;
+        padding-left: 80px;
+    }
+
     .services, .about {
+        display: flex;
         flex-direction: row;
     }
+
+    .services div {
+        padding-bottom: 30px;
+    }
+
+    .about .about-left {
+        display: flex;
+        align-items: center;
+        width: 50%;
+        padding: 0 20px 0 180px;
+    }
+
+    .about .about-right {
+        width: 50%;
+        padding-top: 50px;
+    }
+
+    .about h3 {
+        width: 50%;
+    }
+
+    .about p {
+        width: 75%;
+    }
+
+    .about .banner {
+        width: 300px;
+    }
+
+    .testimonials {
+        display: flex;
+        padding: 0 150px;
+    }
+
+    footer {
+        display: grid;
+        grid-template-columns: repeat(4, 1fr);
+        padding: 50px 200px;
+    }
+
+    footer p {
+        padding: 0 10px;
+    }
+
+    footer .icons-social {
+        margin-top: 10px;
+    }
+
     .hide-on-mobile {
-        display: unset;
+        visibility: visible;
     }
 }
