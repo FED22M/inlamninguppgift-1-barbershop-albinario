@@ -37,7 +37,7 @@ button {
 
 header {
     color: #fff;
-    background: linear-gradient(rgba(0,0,0,0.6), rgba(0,0,0,0.6)), url('graphics/barbershop-1920w.jpg') no-repeat center;
+    background: linear-gradient(rgba(0,0,0,0.6), rgba(0,0,0,0.6)), url('graphics/barbershop-1920w.webp') no-repeat center;
     background-size: cover;
     height: 914px;
 }
@@ -322,7 +322,7 @@ footer .contact i {
     }
 
     .header-content div {
-        border-left: 2px solid #b89463;
+        border-left: 1.5px solid #b89463;
         margin-left: 10px;
         padding-left: 80px;
     }
