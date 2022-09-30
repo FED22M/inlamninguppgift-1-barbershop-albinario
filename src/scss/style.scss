@@ -1,0 +1,404 @@
+@import 'config';
+
+* {
+    box-sizing: border-box;
+}
+
+body {
+    font-family: $font-content;
+    margin: 0;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+nav,
+button {
+    font-family: $font-header;
+    text-transform: uppercase;
+}
+
+a {
+    text-decoration: none;
+    color: #fff;
+}
+
+img {
+    display: block;
+    max-width: 100%;
+}
+
+h2,
+.active,
+button {
+    color: $theme-color;
+}
+
+header {
+    color: #fff;
+    background: linear-gradient(rgba(0,0,0,0.6), rgba(0,0,0,0.6)), url('../graphics/barbershop-1920w.webp') no-repeat center;
+    background-size: cover;
+    height: 914px;
+}
+
+nav {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    background: rgba(0, 0, 0, 0.7);
+    padding: 0 20px;
+    position: fixed;
+    z-index: 1;
+    top: 0;
+    width: 100%;
+
+    div {
+        display: flex;
+        flex-direction: column;
+        margin-top: 25px;
+    }
+
+    ul,
+    li {
+        display: flex;
+        justify-content: flex-end;
+        padding: 0;
+    }
+
+    button {
+        text-align: right;
+        background: none;
+        border: 0;
+        color: #fff;
+    }
+
+    button + .menu {
+        display: none;
+        visibility: hidden;
+    }
+
+    button.menu-open + .menu {
+        display: block;
+        visibility: visible;
+    }
+}
+
+.header-content {
+    padding: 10px;
+    position: absolute;
+    top: 310px;
+
+    h3 {
+        font-size: 2.5em;
+        margin: 0;
+
+        span {
+            color: transparent;
+              -webkit-text-stroke-width: 1px;
+              -webkit-text-stroke-color: #fff;
+        }
+    }
+
+    p {
+        margin: 50px 0;
+    }
+
+    button {
+        background: none;
+        border: 1.5px solid $theme-color;
+        padding: 10px;
+    }
+}
+
+.services {
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    color: #fff;
+
+    div {
+        padding: 0 30px 25% 30px;
+    }
+
+    div:nth-child(odd) {
+        background-color: $theme-color;
+    }
+
+    div:nth-child(even) {
+        background-color: $theme-color-alt;
+    }
+
+    img {
+        border-radius: 100%;
+        width: 50%;
+        margin: auto;
+        margin-top: -25%;
+    }
+
+    h4 {
+        font-size: 2em;
+        margin-bottom: 0;
+    }
+}
+
+.icon-bg {
+    display: flex;
+    width: 50px;
+    height: 50px;
+    border-radius: 100%;
+
+    i {
+        margin: auto;
+    }
+}
+
+.about {
+    padding: 10px;
+    margin-bottom: 40px;
+
+    h2 {
+        font-size: 1em;
+        margin: 40px 0 10px 0;
+    }
+
+    h3 {
+        font-size: 1.5em;
+        margin: 0;
+    }
+
+    .banner {
+        display: flex;
+        align-items: center;
+        background-color: $theme-color-alt;
+        width: 50%;
+        padding: 15px 0;
+        color: #fff;
+
+        .icon-bg {
+            background-color: #000;
+            margin: 0 20px;
+        }
+
+        i {
+            margin: auto;
+            font-size: 1.5em;
+        }
+    }
+
+    h5 {
+        margin: 0;
+        font-size: 1.5em;
+
+        span {
+            display: block;
+            font-size: 0.5em;
+        }
+    }
+}
+
+.testimonial {
+    background-color: #eae8df;
+    text-align: center;
+    padding: 40px 0;
+
+    h2 {
+        font-size: 1em;
+    }
+
+    h3 {
+        font-size: 1.5em;
+        margin: 0;
+    }
+
+    .testimonials {
+        .content {
+            background-color: #fff;
+            border-radius: 5px;
+            margin: 40px 10px;
+            padding: 15px;
+            text-align: left;
+
+            .icon-bg {
+                background-color: $theme-color;
+                margin-top: -38px;
+                font-size: 1.4em;
+                color: #fff;
+            }
+
+            .testifier {
+                display: flex;
+                align-items: center;
+
+                img {
+                    border-radius: 100%;
+                    max-width: 28%;
+                    margin: 0 20px 0 5px;
+                }
+
+                i {
+                    color: $theme-color;
+                    font-size: 0.8em;
+                    margin: 5px 3px 0 0;
+                }
+
+                p:first-of-type {
+                    font-size: 1.3em;
+                    margin: 5px 0;
+                }
+
+                p:last-of-type {
+                    font-family: $font-header;
+                    color: $theme-color;
+                    text-transform: uppercase;
+                }
+            }
+        }
+    }
+}
+
+.hide-on-mobile {
+    visibility: hidden;
+}
+
+footer {
+    background-color: #000;
+    color: #fff;
+    padding: 10px;
+
+    .icons-social {
+        display: flex;
+        margin: -105px 10px 10px 10px;
+
+        .icon-bg {
+            background-color: $theme-color;
+            margin: 5px;
+        }
+    }
+
+    h3 {
+        margin-left: 10px;
+    }
+
+    li {
+        margin: 0 0 5px -10px;
+        color: #b6b5b3;
+    }
+
+    p,
+    a,
+    .fa-li {
+        color: #b6b5b3;
+    }
+
+    .contact {
+        ul {
+            --fa-li-width: 3em;
+            margin-left: 55px;
+        }
+
+        li {
+            margin-bottom: 15px;
+        }
+
+        i {
+            color: $theme-color;
+        }
+    }
+}
+
+@media (min-width: 800px) {
+    nav {
+        h1 {
+            display: flex;
+            justify-content: center;
+        }
+
+        #menu-button {
+            display: none;
+        }
+
+        button + .menu {
+            display: flex;
+            justify-content: flex-start;
+            visibility: visible;
+            margin-top: 0;
+        }
+
+        li {
+            margin-right: 30px;
+        }
+    }
+
+    .header-content {
+        left: 49%;
+        width: 450px;
+
+        div {
+            border-left: 1.5px solid $theme-color;
+            margin-left: 10px;
+            padding-left: 80px;
+        }
+    }
+
+    .services {
+        display: flex;
+        flex-direction: row;
+
+        div {
+            padding-bottom: 30px;
+        }
+    }
+    
+    .about {
+        display: flex;
+        flex-direction: row;
+
+        .left {
+            display: flex;
+            align-items: center;
+            width: 50%;
+            padding: 0 20px 0 180px;
+        }
+
+        .right {
+            width: 50%;
+            padding-top: 50px;
+        }
+
+        h3 {
+            width: 50%;
+        }
+
+        p {
+            width: 75%;
+        }
+
+        .banner {
+            width: 300px;
+        }
+    }
+
+    .testimonials {
+        display: flex;
+        padding: 0 150px;
+    }
+
+    footer {
+        display: grid;
+        grid-template-columns: repeat(4, 1fr);
+        padding: 50px 200px;
+
+        p {
+            padding: 0 10px;
+        }
+
+        .icons-social {
+            margin-top: 10px;
+        }
+    }
+
+    .hide-on-mobile {
+        visibility: visible;
+    }
+}
