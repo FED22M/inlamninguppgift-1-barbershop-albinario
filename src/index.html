@@ -12,7 +12,13 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Barlow+Semi+Condensed:wght@700&family=Poppins:wght@300&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="css/style.min.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css" integrity="sha512-xh6O/CkQoPOWDdYTDqeRdPCVd1SpvCA9XXcUnZS2FmJNp1coAFzvtCN9BmamE+4aHK8yyUHUSCcJHgXloTyT2A==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css" integrity="sha512-xh6O/CkQoPOWDdYTDqeRdPCVd1SpvCA9XXcUnZS2FmJNp1coAFzvtCN9BmamE+4aHK8yyUHUSCcJHgXloTyT2A==" crossorigin="anonymous" referrerpolicy="no-referrer">
+    <script>
+        const menuBtn = document.querySelector('#menu-button');
+        menuBtn.addEventListener('click', () => {
+            menuBtn.classList.toggle('menu-open');
+        });
+    </script>
 </head>
 <body>
     <header>
@@ -43,22 +49,22 @@
     <main>
         <section class="services"> <!--Services-->
             <div>
-                <img srcset="graphics/service_hair_styles-200w.webp 200w, graphics/service_hair_styles-500w.webp 500w" sizes="(min-width: 400px) 200px, 500px" src="graphics/service_hair_styles-500w.webp" alt="Barbershop hair styles" />
+                <img srcset="graphics/service_hair_styles-200w.webp 200w, graphics/service_hair_styles-500w.webp 500w" sizes="(min-width: 400px) 200px, 500px" src="graphics/service_hair_styles-500w.webp" alt="Barbershop hair styles">
                 <h4>Hair styles</h4>
                 <p>A small river named Duden flows by their place and supplies it with the necessary regelialia. It is a paradisematic country, in which roasted parts</p>
             </div>
             <div>
-                <img srcset="graphics/service_beard_trim-200w.webp 200w, graphics/service_beard_trim-500w.webp 500w" sizes="(min-width: 400px) 200px, 500px" src="graphics/service_beard_trim-500w.webp" alt="Barbershop beard trim" />
+                <img srcset="graphics/service_beard_trim-200w.webp 200w, graphics/service_beard_trim-500w.webp 500w" sizes="(min-width: 400px) 200px, 500px" src="graphics/service_beard_trim-500w.webp" alt="Barbershop beard trim">
                 <h4>Beard trim</h4>
                 <p>A small river named Duden flows by their place and supplies it with the necessary regelialia. It is a paradisematic country, in which roasted parts</p>
             </div>
             <div>
-                <img srcset="graphics/service_hot_shave-200w.webp 200w, graphics/service_hot_shave-500w.webp 500w" sizes="(min-width: 400px) 200px, 500px" src="graphics/service_hot_shave-500w.webp" alt="Barbershop hot shave" />
+                <img srcset="graphics/service_hot_shave-200w.webp 200w, graphics/service_hot_shave-500w.webp 500w" sizes="(min-width: 400px) 200px, 500px" src="graphics/service_hot_shave-500w.webp" alt="Barbershop hot shave">
                 <h4>Hot shave</h4>
                 <p>A small river named Duden flows by their place and supplies it with the necessary regelialia. It is a paradisematic country, in which roasted parts</p>
             </div>
             <div>
-                <img srcset="graphics/service_hair_schampoo-200w.webp 200w, graphics/service_hair_schampoo-500w.webp 500w" sizes="(min-width: 400px) 200px, 500px" src="graphics/service_hair_schampoo-500w.webp" alt="Barbershop hair schampoo" />
+                <img srcset="graphics/service_hair_schampoo-200w.webp 200w, graphics/service_hair_schampoo-500w.webp 500w" sizes="(min-width: 400px) 200px, 500px" src="graphics/service_hair_schampoo-500w.webp" alt="Barbershop hair schampoo">
                 <h4>Hair schampoo</h4>
                 <p>A small river named Duden flows by their place and supplies it with the necessary regelialia. It is a paradisematic country, in which roasted parts</p>
             </div>
@@ -66,7 +72,7 @@
         <section class="about"> <!--About-->
             <div class="left">
                 <!-- Är inte jättenöjd med hur bilden agerar responsivt här -->
-                <img srcset="graphics/about_barber-500w.webp 500w, graphics/about_barber-1000w.webp 1000w" sizes="(min-width: 600px) 500px, 1000px" src="graphics/about_barber-1000w.webp" alt="Barbershop about barber" />
+                <img srcset="graphics/about_barber-500w.webp 500w, graphics/about_barber-1000w.webp 1000w" sizes="(min-width: 600px) 500px, 1000px" src="graphics/about_barber-1000w.webp" alt="Barbershop about barber">
             </div>
             <div class="right">
                 <h2>About Barber</h2>
@@ -74,13 +80,13 @@
                 <p>Far far away, behind the word mountains, far from the countries Vokalia and Consonantia, there live the blind texts. Separated they live in bookmarksgrove right at the coast of the Semantics, a large language ocean. A small river named Duden flows by their place and supplies it with the necessary regelialia.</p>
                 <div class="banner">
                     <div class="icon-bg"><i class="fa-regular fa-calendar-days"></i></div>
-                    <h5>20<span>Years of<br/>experience</span></h5>
+                    <h5>20<span>Years of<br>experience</span></h5>
                 </div>
             </div>
         </section>
         <section class="testimonial"> <!--Testimonial. Osäker på om vi förväntas bygga en karusell här? Hittar ingen info i briefen om det.-->
             <h2>Testimonial</h2>
-            <h3>People say<br/>about our barber</h3>
+            <h3>People say<br>about our barber</h3>
             <div class="testimonials">
                 <div class="content">
                     <div class="icon-bg">
@@ -88,7 +94,7 @@
                     </div>
                     <p>Far far away, behind the word mountains, far from the countries Vokalia and Consonantia, there live the blind texts</p>
                     <div class="testifier">
-                        <img srcset="graphics/testimonial_1-200w.webp 200w, graphics/testimonial_1-500w.webp 500w" sizes="(min-width: 400px) 200px, 500px" src="graphics/testimonial_1-500w.webp" alt="Barbershop testimonial 1" />
+                        <img srcset="graphics/testimonial_1-200w.webp 200w, graphics/testimonial_1-500w.webp 500w" sizes="(min-width: 400px) 200px, 500px" src="graphics/testimonial_1-500w.webp" alt="Barbershop testimonial 1">
                         <div>
                             <div>
                                 <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i>
@@ -104,7 +110,7 @@
                     </div>
                     <p>Far far away, behind the word mountains, far from the countries Vokalia and Consonantia, there live the blind texts</p>
                     <div class="testifier">
-                        <img srcset="graphics/testimonial_2-200w.webp 200w, graphics/testimonial_2-500w.webp 500w" sizes="(min-width: 400px) 200px, 500px" src="graphics/testimonial_2-500w.webp" alt="Barbershop testimonial 1" />
+                        <img srcset="graphics/testimonial_2-200w.webp 200w, graphics/testimonial_2-500w.webp 500w" sizes="(min-width: 400px) 200px, 500px" src="graphics/testimonial_2-500w.webp" alt="Barbershop testimonial 1">
                         <div>
                             <div>
                                 <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i>
@@ -120,7 +126,7 @@
                     </div>
                     <p>Far far away, behind the word mountains, far from the countries Vokalia and Consonantia, there live the blind texts</p>
                     <div class="testifier">
-                        <img srcset="graphics/testimonial_3-200w.webp 200w, graphics/testimonial_3-500w.webp 500w" sizes="(min-width: 400px) 200px, 500px" src="graphics/testimonial_3-500w.webp" alt="Barbershop testimonial 1" />
+                        <img srcset="graphics/testimonial_3-200w.webp 200w, graphics/testimonial_3-500w.webp 500w" sizes="(min-width: 400px) 200px, 500px" src="graphics/testimonial_3-500w.webp" alt="Barbershop testimonial 1">
                         <div>
                             <div>
                                 <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i>
@@ -173,10 +179,4 @@
         </div>
     </footer>
 </body>
-<script>
-    const menuBtn = document.querySelector('#menu-button');
-    menuBtn.addEventListener('click', () => {
-        menuBtn.classList.toggle('menu-open');
-    });
-</script>
 </html>
