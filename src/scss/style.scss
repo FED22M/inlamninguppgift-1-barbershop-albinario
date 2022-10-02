@@ -218,6 +218,8 @@ nav {
     }
 
     .testimonials {
+        display: flex;
+
         .content {
             background-color: #fff;
             border-radius: 5px;
@@ -313,7 +315,17 @@ footer {
     }
 }
 
-@media (min-width: $breakpoint-mobile) and (max-width: $breakpoint-tablet) {
+@media (max-width: calc($maxwidth-mobile - 1px)) {
+    .testimonials {
+        overflow-x: scroll;
+
+        .content {
+            min-width: 94%;
+        }
+    }
+}
+
+@media (min-width: $maxwidth-mobile) and (max-width: $maxwidth-tablet) {
     .services {
         flex-wrap: wrap;
         flex-direction: row;
@@ -333,7 +345,7 @@ footer {
     }
 }
 
-@media (min-width: $breakpoint-tablet) {
+@media (min-width: calc($maxwidth-tablet + 1px)) {
     nav {
         h1 {
             display: flex;
@@ -404,7 +416,6 @@ footer {
     }
 
     .testimonials {
-        display: flex;
         padding: 0 150px;
     }
 
@@ -414,7 +425,7 @@ footer {
         padding: 50px 200px;
 
         p {
-            padding: 0 10px;
+            padding: 0 60px 0 10px;
         }
 
         .icons-social {

@@ -13,12 +13,6 @@
     <link href="https://fonts.googleapis.com/css2?family=Barlow+Semi+Condensed:wght@700&family=Poppins:wght@300&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="css/style.min.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css" integrity="sha512-xh6O/CkQoPOWDdYTDqeRdPCVd1SpvCA9XXcUnZS2FmJNp1coAFzvtCN9BmamE+4aHK8yyUHUSCcJHgXloTyT2A==" crossorigin="anonymous" referrerpolicy="no-referrer">
-    <script>
-        const menuBtn = document.querySelector('#menu-button');
-        menuBtn.addEventListener('click', () => {
-            menuBtn.classList.toggle('menu-open');
-        });
-    </script>
 </head>
 <body>
     <header>
@@ -84,9 +78,12 @@
                 </div>
             </div>
         </section>
-        <section class="testimonial"> <!--Testimonial. Osäker på om vi förväntas bygga en karusell här? Hittar ingen info i briefen om det.-->
+        <section class="testimonial"> <!--Testimonial.-->
             <h2>Testimonial</h2>
             <h3>People say<br>about our barber</h3>
+            <!-- "Mobil-karusellen" är jag inte nöjd med fullt ut. Ej kommit i mål med:
+                1: "snap" mellan de olika divarna
+                2: dots istället för scrollbar -->
             <div class="testimonials">
                 <div class="content">
                     <div class="icon-bg">
@@ -178,5 +175,11 @@
             </ul> 
         </div>
     </footer>
+    <script>
+        const menuBtn = document.querySelector('#menu-button');
+        menuBtn.addEventListener('click', () => {
+            menuBtn.classList.toggle('menu-open');
+        });
+    </script>
 </body>
 </html>
